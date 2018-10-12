@@ -401,7 +401,6 @@ def H3_read_bankrate(dy):
 
 # First thing everyday: update symbols and googlesheets accordingly.
     # one problem.,..when does the website update its sp500 info daily??!!
-#test_dy= r"/Users/toby/Documents/PycharmProjects/Option/test"
 cur_date = datetime.date.today()
 cur_date = cur_date.strftime("%Y%m%d") 
 
@@ -409,15 +408,14 @@ cur_date = cur_date.strftime("%Y%m%d")
 #    os.makedirs(directory)
 #date = datetime.date.today()
 #date = date.strftime("%Y%m%d") 
-#directory = r"/Users/fangyuanhuang/Documents/PycharmProjects/Option/"+str(cur_date)
-#directory = r"/Users/toby/Documents/PycharmProjects/Option/test"
-directory = r"/Users/toby/Documents/PycharmProjects/Option/"+str(cur_date)
+
+directory = r".../PycharmProjects/Option/"+str(cur_date)
 if not os.path.exists(directory):
     os.makedirs(directory)
 
 def daily_job():
     try:
-        directory = r"/Users/toby/Documents/PycharmProjects/Option/"+str(cur_date)
+        directory = r".../PycharmProjects/Option/"+str(cur_date)
         if not os.path.exists(directory):
             os.makedirs(directory)
         dy = directory
@@ -485,7 +483,5 @@ while True:
 #print(df3 == df1)
 
 # Jul28:
-#path1 = '/Users/toby/Documents/PycharmProjects/Option/test/GoolgeAPI_sp500.txt'
-#path2 = '/Users/toby/Documents/PycharmProjects/Option/test/GoolgeAPI_sp500_1.txt'
 #quote_df.to_csv(path1,sep=',', header=None, index=None,mode ='w')
 #np.savetxt(path2, quote_df.values, fmt='%s')
